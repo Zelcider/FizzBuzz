@@ -22,7 +22,7 @@ func CreateFizzBuzz(
 	Str2 string,
 ) (FizzBuzz, error) {
 	if Int1 < 1 {
-		return FizzBuzz{}, errors.New("Invalid value  (" + strconv.FormatInt(Int1, 10) + ") for Int1, non nullable positive integer expected")
+		return FizzBuzz{}, errors.New("Invalid value (" + strconv.FormatInt(Int1, 10) + ") for Int1, non nullable positive integer expected")
 	}
 	if Int2 < 1 {
 		return FizzBuzz{}, errors.New("Invalid value (" + strconv.FormatInt(Int2, 10) + ") for Int2, non nullable positive integer expected")
@@ -31,7 +31,7 @@ func CreateFizzBuzz(
 		return FizzBuzz{}, errors.New("Invalid value (" + Str1 + ") for Str1, non-empty string expected")
 	}
 	if Str2 == "" {
-		return FizzBuzz{}, errors.New("Invalid value (" + Str2 + ")for Str2, non-empty string expected")
+		return FizzBuzz{}, errors.New("Invalid value (" + Str2 + ") for Str2, non-empty string expected")
 	}
 	if Limit < 1 {
 		return FizzBuzz{}, errors.New("Invalid value (" + strconv.FormatInt(Limit, 10) + ") for Limit, non nullable positive integer expected")

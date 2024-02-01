@@ -20,14 +20,8 @@ type TestApiResult struct {
 	api *api.Result
 }
 
-var statRepo = db.NewStatInMemory()
-
 func Setup() *TestApiResult {
-	return &TestApiResult{api: api.Setup(api.Repositories{Stat: statRepo})}
-}
-
-func Setup2(repositories api.Repositories) *TestApiResult {
-	return &TestApiResult{api: api.Setup(repositories)}
+	return &TestApiResult{api: api.Setup(api.Repositories{Stat: db.NewStatInMemory()})}
 }
 
 func (testApi *TestApiResult) Run() error {
