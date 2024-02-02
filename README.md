@@ -1,4 +1,4 @@
-# lbc-test
+# FizzBuzz
 
 
 ## Test
